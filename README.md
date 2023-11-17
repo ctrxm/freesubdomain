@@ -1,4 +1,6 @@
 ## Documentation
+Code ini adalah Code/Script Pembuat Subdomain Otomatis Menggunakan Bot di Telegram. Code ini bisa MultiDomain, dan CDN nya ialah Cloudflare!
+
 **One-Line Installing on Fresh VPS Ubuntu**
 ```shell script
 sudo apt-get update && sudo apt-get install -y screen python3 python3-pip && git clone https://github.com/powergunn/freesubdomain.git && cd freesubdomain && pip3 install -r requirements.txt
