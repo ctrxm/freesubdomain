@@ -9,7 +9,7 @@ import string
 TELEGRAM_TOKEN = '7045651779:AAFUJTYLVVwgGXNVrlkd5OtwYWsJq2sJCQQ'
 
 # Ganti dengan API Key Cloudflare Anda
-CLOUDFLARE_API_KEY = 'CLOUDFLARE_API_KEY'
+CLOUDFLARE_API_KEY = '4c6c88b6cffbe2f738489f5cb1612700f17f3'
 CLOUDFLARE_EMAIL = 'hendra1rangga@gmail.com'
 
 # Dictionary untuk menyimpan alamat IP server pengguna
