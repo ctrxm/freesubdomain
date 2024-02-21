@@ -6,7 +6,7 @@ import random
 import string
 
 # Ganti dengan token bot Telegram Anda
-TELEGRAM_TOKEN = 'TELEGRAM_TOKEN'
+TELEGRAM_TOKEN = '7045651779:AAFUJTYLVVwgGXNVrlkd5OtwYWsJq2sJCQQ'
 
 # Ganti dengan API Key Cloudflare Anda
 CLOUDFLARE_API_KEY = 'CLOUDFLARE_API_KEY'
