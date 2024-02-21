@@ -20,7 +20,7 @@ def start(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text="Buat Subdomain Gratis! Untuk Kamu Yang Mau Belajar! BY : @ctrxzip")
 
     # Pilihan domain
-    reply_keyboard = [['domain1.com', 'domain2.com', 'Cancel']]
+    reply_keyboard = [['cilacap.city', 'gafoqe.com', 'Cancel']]
     markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True, resize_keyboard=True)
     context.bot.send_message(chat_id=user_id, text="Pilih domain:", reply_markup=markup)
 
@@ -39,7 +39,7 @@ def wait_domain(update, context):
     user_id = update.message.from_user.id
     selected_domain = update.message.text.lower()
 
-    if selected_domain not in ['domain1.com', 'domain2.com', 'cancel']:
+    if selected_domain not in ['cilacap.city', 'gafoqe.com', 'cancel']:
         context.bot.send_message(chat_id=user_id, text="Pilihan domain tidak valid. Silakan pilih domain yang benar.")
         return 'wait_domain'
     elif selected_domain == 'cancel':
@@ -72,9 +72,9 @@ def wait_ip(update, context):
     cf = CloudFlare(email=CLOUDFLARE_EMAIL, token=CLOUDFLARE_API_KEY)
 
     # Menentukan zone id berdasarkan pilihan domain
-    if user_data['domain'] == 'domain1.com':
+    if user_data['domain'] == 'cilacap.city':
         zone_id = 'ZONE_ID_CLOUDFLARE'
-    elif user_data['domain'] == 'domain2.com':
+    elif user_data['domain'] == 'gafoqe.com':
         zone_id = 'ZONE_ID_CLOUDFLARE'
     else:
         context.bot.send_message(chat_id=user_id, text="Terjadi kesalahan. Silakan coba lagi.")
