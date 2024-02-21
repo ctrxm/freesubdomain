@@ -73,9 +73,9 @@ def wait_ip(update, context):
 
     # Menentukan zone id berdasarkan pilihan domain
     if user_data['domain'] == 'cilacap.city':
-        zone_id = 'ZONE_ID_CLOUDFLARE'
+        zone_id = 'e7d56799627ddef43dd71c4ebf15bb73'
     elif user_data['domain'] == 'gafoqe.com':
-        zone_id = 'ZONE_ID_CLOUDFLARE'
+        zone_id = '45b2d3902a429f40c86fb435477de110'
     else:
         context.bot.send_message(chat_id=user_id, text="Terjadi kesalahan. Silakan coba lagi.")
         return cancel(update, context)
