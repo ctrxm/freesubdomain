@@ -17,7 +17,7 @@ user_ips = {}
 
 def start(update, context):
     user_id = update.message.from_user.id
-    context.bot.send_message(chat_id=update.message.chat_id, text="Halo! Saya BOT GunFreeSubdomain😌")
+    context.bot.send_message(chat_id=update.message.chat_id, text="Buat Subdomain Gratis! Untuk Kamu Yang Mau Belajar! BY : @ctrxzip")
 
     # Pilihan domain
     reply_keyboard = [['domain1.com', 'domain2.com', 'Cancel']]
@@ -50,7 +50,7 @@ def wait_domain(update, context):
     # Menggunakan keyboard khusus untuk memudahkan input IP
     reply_keyboard = [['Cancel']]
     markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True, resize_keyboard=True)
-    context.bot.send_message(chat_id=user_id, text="Masukkan IP server Anda:", reply_markup=markup)
+    context.bot.send_message(chat_id=user_id, text="Masukkan IP server Hosting/Bug/VPS Kamu:", reply_markup=markup)
 
     # Mengatur state agar bot tahu kita sedang menunggu IP
     return 'wait_ip'
@@ -89,11 +89,11 @@ def wait_ip(update, context):
     try:
         cf.zones.dns_records.post(zone_id, data=record)
         # Mengirimkan pesan ke pengguna dengan subdomain yang dibuat
-        message = f"Subdomain Berhasil dibuat.\nCreated by @gungrate\n\nDOMAIN : {user_data['domain']}\nIP : {user_data['ip']}\n\nSubdomain Anda :\n{subdomain}.{user_data['domain']}\n\nThx.\nID Anda : {user_id}\n"
+        message = f"Subdomain Berhasil dibuat.\nCreated by @ctrxzip\n\nDOMAIN : {user_data['domain']}\nIP : {user_data['ip']}\n\nSubdomain Kamu :\n{subdomain}.{user_data['domain']}\n\nThx.\nID Kamu : {user_id}\n"
         context.bot.send_message(chat_id=user_id, text=message)
     except Exception as e:
         print(f"Error creating DNS record: {e}")
-        context.bot.send_message(chat_id=user_id, text="Terjadi kesalahan saat menciptakan rekaman DNS. Silakan coba lagi.")
+        context.bot.send_message(chat_id=user_id, text="Terjadi kesalahan saat membuat rekaman DNS. Silakan coba lagi.")
 
     # Menghapus data pengguna dari kamus setelah digunakan
     del user_ips[user_id]
